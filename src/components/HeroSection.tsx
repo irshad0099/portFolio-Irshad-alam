@@ -11,9 +11,9 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             <div className="opacity-0 animate-slide-up stagger-1">
-              <span className="inline-block px-4 py-2 rounded-full glass text-primary text-sm font-medium mb-6">
+              {/* <span className="inline-block px-4 py-2 rounded-full glass text-primary text-sm font-medium mb-6">
                 👋 Welcome to my portfolio
-              </span>
+              </span> */}
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 opacity-0 animate-slide-up stagger-2">
@@ -25,7 +25,7 @@ const HeroSection = () => {
             </h2>
 
             <p className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 mb-8 opacity-0 animate-slide-up stagger-4">
-              Building scalable web applications with 5+ years of experience in
+              Building scalable web applications with 2 years of experience in
               <span className="text-primary"> Angular</span>,
               <span className="text-secondary"> React.js</span>,
               <span className="text-accent"> Node.js</span> & MongoDB

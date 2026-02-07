@@ -31,9 +31,9 @@ const SkillsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full glass text-primary text-sm font-medium mb-4">
+          {/* <span className="inline-block px-4 py-2 rounded-full glass text-primary text-sm font-medium mb-4">
             Skills
-          </span>
+          </span> */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Technical <span className="text-gradient">Expertise</span>
           </h2>

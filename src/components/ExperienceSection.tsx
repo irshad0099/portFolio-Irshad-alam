@@ -5,7 +5,7 @@ const experiences = [
     company: "Yono Entertainment Pvt Ltd",
     location: "Mohali, Chandigarh",
     role: "Full Stack Developer",
-    period: "Current",
+    period: "Sep 2025 – Present",
     type: "Full-time",
     color: "primary",
     description: [
@@ -19,7 +19,7 @@ const experiences = [
     company: "CapEngage Technology Solutions Pvt. Ltd.",
     location: "Hyderabad",
     role: "Associate Software Engineer",
-    period: "Jan 2020 – March 2025",
+    period: "Jan 2024 – March 2025",
     type: "Full-time",
     color: "secondary",
     description: [
@@ -39,9 +39,9 @@ const ExperienceSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full glass text-primary text-sm font-medium mb-4">
+          {/* <span className="inline-block px-4 py-2 rounded-full glass text-primary text-sm font-medium mb-4">
             Experience
-          </span>
+          </span> */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             My <span className="text-gradient">Work Journey</span>
           </h2>
