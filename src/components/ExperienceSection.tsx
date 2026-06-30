@@ -2,17 +2,32 @@ import { Building2, Calendar, MapPin, ArrowRight } from "lucide-react";
 
 const experiences = [
   {
+    company: "Go Mobility Tech Private Limited",
+    location: "Delhi, India",
+    role: "Full Stack Developer",
+    period: "Jan 2026 – Present",
+    type: "Full-time · Product Based",
+    color: "primary",
+    description: [
+      "Working on a mobility platform product (similar to Ola/Uber) — building and maintaining rider & driver-facing web applications using React.js and Node.js",
+      "Developed QR code scanner integration for seamless user onboarding and vehicle access flows",
+      "Designed and implemented scalable RESTful APIs with Express.js and MongoDB to handle real-time ride and fleet data",
+      "Built responsive, high-performance UIs with TailwindCSS ensuring smooth cross-device experience",
+      "Collaborating with product, design, and backend teams in Agile sprints to ship features end-to-end",
+    ],
+  },
+  {
     company: "Yono Entertainment Pvt Ltd",
     location: "Mohali, Chandigarh",
     role: "Full Stack Developer",
-    period: "Sep 2025 – Present",
+    period: "Sep 2025 – Jan 2026",
     type: "Full-time",
-    color: "primary",
+    color: "secondary",
     description: [
-      "Developing and maintaining entertainment web applications using React.js and Node.js",
-      "Building scalable backend services with Express.js and MongoDB",
-      "Creating responsive and interactive user interfaces with TailwindCSS",
-      "Collaborating with cross-functional teams to deliver high-quality products",
+      "Developed and maintained entertainment web applications using React.js and Node.js",
+      "Built scalable backend services with Express.js and MongoDB",
+      "Created responsive and interactive user interfaces with TailwindCSS",
+      "Collaborated with cross-functional teams to deliver high-quality products on time",
     ],
   },
   {

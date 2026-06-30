@@ -43,7 +43,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {/* Frontend */}
           <div className="glass rounded-2xl p-8 glow-primary">
             <div className="flex items-center gap-3 mb-8">

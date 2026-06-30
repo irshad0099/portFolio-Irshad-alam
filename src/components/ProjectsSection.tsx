@@ -1,3 +1,4 @@
+import React from "react";
 import {
   ExternalLink,
   Github,
@@ -8,9 +9,22 @@ import {
   MessageSquare,
   Layout,
   Database,
+  QrCode,
 } from "lucide-react";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  icon: React.ElementType;
+  color: string;
+  tags: string[];
+  link: string;
+  github: string;
+  isLive?: boolean;
+  qrImage?: string;
+};
+
+const projects: Project[] = [
   {
     title: "Activity Tracker",
     description:
@@ -71,6 +85,18 @@ const projects = [
     link: "#",
     github: "#",
   },
+  {
+    title: "GoMobility",
+    description:
+      "Developed a mobility solutions platform with QR code scanner integration for seamless user onboarding and service access. Built scalable backend APIs and responsive frontend for an end-to-end transport & mobility service.",
+    icon: QrCode,
+    color: "primary",
+    tags: ["React.js", "Node.js", "QR Scanner", "REST API"],
+    link: "https://www.gomobility.co.in/",
+    github: "#",
+    isLive: true,
+    qrImage: "/gomobility-qr.png",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -104,27 +130,61 @@ const ProjectsSection = () => {
                   : "hover:glow-accent"
               }`}
             >
-              {/* Icon */}
-              <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                  project.color === "primary"
-                    ? "bg-primary/20"
-                    : project.color === "secondary"
-                    ? "bg-secondary/20"
-                    : "bg-accent/20"
-                }`}
-              >
-                <project.icon
-                  className={
+              {/* Icon or QR Image */}
+              {project.qrImage ? (
+                <div className="mb-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                        project.color === "primary"
+                          ? "bg-primary/20"
+                          : project.color === "secondary"
+                          ? "bg-secondary/20"
+                          : "bg-accent/20"
+                      }`}
+                    >
+                      <project.icon
+                        className={
+                          project.color === "primary"
+                            ? "text-primary"
+                            : project.color === "secondary"
+                            ? "text-secondary"
+                            : "text-accent"
+                        }
+                        size={20}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <img
+                      src={project.qrImage}
+                      alt="GoMobility QR Code"
+                      className="w-36 h-36 rounded-xl object-contain bg-white p-2 border border-primary/20"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
                     project.color === "primary"
-                      ? "text-primary"
+                      ? "bg-primary/20"
                       : project.color === "secondary"
-                      ? "text-secondary"
-                      : "text-accent"
-                  }
-                  size={28}
-                />
-              </div>
+                      ? "bg-secondary/20"
+                      : "bg-accent/20"
+                  }`}
+                >
+                  <project.icon
+                    className={
+                      project.color === "primary"
+                        ? "text-primary"
+                        : project.color === "secondary"
+                        ? "text-secondary"
+                        : "text-accent"
+                    }
+                    size={28}
+                  />
+                </div>
+              )}
 
               {/* Content */}
               <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-gradient transition-all">
@@ -148,26 +208,23 @@ const ProjectsSection = () => {
 
               {/* Links */}
               <div className="flex items-center gap-4">
-                <a
-                  href={project.link}
-                  className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                    project.color === "primary"
-                      ? "text-primary hover:text-primary/80"
-                      : project.color === "secondary"
-                      ? "text-secondary hover:text-secondary/80"
-                      : "text-accent hover:text-accent/80"
-                  }`}
-                >
-                  {/* <ExternalLink size={16} />
-                  Live Demo */}
-                </a>
-                <a
-                  href={project.github}
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
-                >
-                  {/* <Github size={16} />
-                  Source */}
-                </a>
+                {project.isLive && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                      project.color === "primary"
+                        ? "text-primary hover:text-primary/80"
+                        : project.color === "secondary"
+                        ? "text-secondary hover:text-secondary/80"
+                        : "text-accent hover:text-accent/80"
+                    }`}
+                  >
+                    <ExternalLink size={16} />
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
           ))}

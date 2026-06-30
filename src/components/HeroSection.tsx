@@ -25,7 +25,7 @@ const HeroSection = () => {
             </h2>
 
             <p className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 mb-8 opacity-0 animate-slide-up stagger-4">
-              Building scalable web applications with 2 years of experience in
+              Building scalable web applications with 3 years of experience in
               <span className="text-primary"> Angular</span>,
               <span className="text-secondary"> React.js</span>,
               <span className="text-accent"> Node.js</span> & MongoDB
@@ -97,7 +97,7 @@ const HeroSection = () => {
                   React.js
                 </span>
               </div>
-              <div className="absolute top-1/2 -left-8 px-4 py-2 rounded-xl glass animate-float-slow">
+              <div className="absolute top-1/2 -left-6 px-4 py-2 rounded-xl glass animate-float-slow">
                 <span className="text-sm font-medium text-secondary">
                   Node.js
                 </span>

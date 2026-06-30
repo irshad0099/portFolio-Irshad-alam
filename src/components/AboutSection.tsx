@@ -1,7 +1,7 @@
 import { MapPin, Phone, Mail, Calendar, Award, Code } from "lucide-react";
 
 const stats = [
-  { label: "Years Experience", value: "2", icon: Calendar },
+  { label: "Years Experience", value: "3", icon: Calendar },
   { label: "Projects Completed", value: "10+", icon: Code },
   { label: "Performance Boost", value: "35%", icon: Award },
 ];
@@ -29,7 +29,7 @@ const AboutSection = () => {
                 Full Stack Web Developer
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Full Stack Web Developer with 2 years of experience in
+                Full Stack Web Developer with 3 years of experience in
                 designing, developing, and deploying scalable web applications.
                 Proficient in Angular, React.js, Node.js, Express, MongoDB, and
                 TailwindCSS.
@@ -50,7 +50,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium text-foreground">Mohali, Chandigarh</p>
+                  <p className="font-medium text-foreground">Delhi, India</p>
                 </div>
               </div>
               <div className="glass rounded-xl p-4 flex items-center gap-4 glass-hover">
